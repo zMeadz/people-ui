@@ -1,0 +1,25 @@
+@import 'styles.scss';
+
+.topbar {
+  height: 100px;
+  border-bottom: 1px solid $grey1;
+
+  & * {
+    display: inline-block;
+  }
+
+  & .logo {
+    width: 200px;
+    padding: 0px 20px;
+    margin-top: 27px;
+    border-right: 1px solid grey;
+  }
+
+  & .heading {
+    position: relative;
+    font-size: 20px;
+    color: grey;
+    top: -15px;
+    left: 20px;
+  }
+}
