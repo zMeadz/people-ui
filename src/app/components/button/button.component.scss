@@ -1,0 +1,13 @@
+@import "styles.scss";
+
+.text {
+  padding: 10px 15px;
+  background-color: $blue1;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+
+  &:hover {
+    opacity: .7;
+  }
+}

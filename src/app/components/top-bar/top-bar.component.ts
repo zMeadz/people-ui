@@ -1,16 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.scss']
 })
-export class TopBarComponent implements OnInit {
+export class TopBarComponent {
   @Input() header: string = '';
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  onEmailCharacterCountClick() {
+    this.router.navigate(['/email-character-count'])
   }
 
+  onPeopleClick() {
+    this.router.navigate(['/people'])
+  }
 }

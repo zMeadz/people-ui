@@ -26,4 +26,14 @@
     top: -15px;
     left: 20px;
   }
+
+  & .nav {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+
+    & * {
+      margin: 0px 10px;
+    }
+  }
 }

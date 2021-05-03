@@ -17,6 +17,11 @@ export class PeopleService extends HttpService {
 
   async getPeople(): Promise<Array<Person>> {
     const result = await this.get('people');
-    return this.mappingService.mapCollection(result);
+    return this.mappingService.mapPersonCollection(result);
+  }
+
+  async getEmailCharacterCount() {
+    const result = await this.get('people/character-count?field=email_address');
+    return this.mappingService.mapEmailCharacterCount(result);
   }
 }

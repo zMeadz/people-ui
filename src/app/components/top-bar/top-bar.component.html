@@ -7,5 +7,17 @@
     >
 
     <p class="heading">{{ header }}</p>
+
+    <div class="nav">
+      <app-button
+        label="People"
+        (click)="onPeopleClick()"
+      ></app-button>
+
+      <app-button
+        label="Email Character Count"
+        (click)="onEmailCharacterCountClick()"
+      ></app-button>
+    </div>
   </div>
 </div>

@@ -1,0 +1,10 @@
+<div>
+  <app-top-bar header="Email Character Count"></app-top-bar>
+
+  <div class="content">
+    <app-data-table
+      [columns]="columns$ | async"
+      [data]="data$ | async"
+    ></app-data-table>
+  </div>
+</div>
