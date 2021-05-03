@@ -3,11 +3,20 @@ import { EmailCharacterMap } from '../types/email-character-map';
 import { Person } from '../types/person';
 import { PersonApiResponse } from '../types/person-api-response';
 import { EmailCharacterCountResponse } from '../types/email-character-count-response';
+import { DuplicatesApiResponse } from '../types/duplicates-api-response';
+import { PersonWithDuplicates } from '../types/person-with-duplicates';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PeopleMappingService {
+  mapDuplicates(collection: Array<DuplicatesApiResponse>): Array<PersonWithDuplicates> {
+    return collection.map(({ record, matches }) => ({
+      ...this.mapPersonRecord(record),
+      duplicates: this.mapPersonCollection(matches)
+    }))
+  }
+
   mapEmailCharacterCount(map: EmailCharacterCountResponse): Array<EmailCharacterMap> {
     return Object.entries(map).map(([key, value]) => ({ character: key, count: value }));
   }

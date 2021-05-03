@@ -14,10 +14,14 @@ export class TopBarComponent {
   ) {}
 
   onEmailCharacterCountClick() {
-    this.router.navigate(['/email-character-count'])
+    this.router.navigate(['/email-character-count']);
+  }
+
+  onFindDuplicatesClick() {
+    this.router.navigate(['/duplicates']);
   }
 
   onPeopleClick() {
-    this.router.navigate(['/people'])
+    this.router.navigate(['/people']);
   }
 }

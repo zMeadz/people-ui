@@ -26,7 +26,7 @@ export class PeopleLayoutService {
     this.peopleSubject$.next(people);
   }
 
-  peopleColumns() {
+  private peopleColumns() {
     return [
       {
         label: 'Name',

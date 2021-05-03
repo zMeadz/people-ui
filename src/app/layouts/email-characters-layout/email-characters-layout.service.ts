@@ -21,12 +21,7 @@ export class EmailCharactersLayoutService {
     this.getEmailCharacterCount();
   }
 
-  async getEmailCharacterCount(): Promise<void> {
-    const result = await this.peopleService.getEmailCharacterCount();
-    this.emailCharacterSubject$.next(result);
-  }
-
-  emailCharacterCountColumns() {
+  private emailCharacterCountColumns() {
     return [
       {
         label: 'Character',
@@ -37,5 +32,10 @@ export class EmailCharactersLayoutService {
         fieldName: 'count',
       },
     ]
+  }
+
+  async getEmailCharacterCount(): Promise<void> {
+    const result = await this.peopleService.getEmailCharacterCount();
+    this.emailCharacterSubject$.next(result);
   }
 }

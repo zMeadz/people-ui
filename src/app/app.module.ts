@@ -8,6 +8,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { ButtonComponent } from './components/button/button.component';
 import { EmailCharactersLayoutComponent } from './layouts/email-characters-layout/email-characters-layout.component';
+import { DuplicatesLayoutComponent } from './layouts/duplicates-layout/duplicates-layout.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EmailCharactersLayoutComponent } from './layouts/email-characters-layou
     TopBarComponent,
     DataTableComponent,
     ButtonComponent,
-    EmailCharactersLayoutComponent
+    EmailCharactersLayoutComponent,
+    DuplicatesLayoutComponent
   ],
   imports: [
     BrowserModule,

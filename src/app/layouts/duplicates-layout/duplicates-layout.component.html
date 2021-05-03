@@ -1,0 +1,15 @@
+<div>
+  <app-top-bar header="Find Duplicates"></app-top-bar>
+
+  <div class="content">
+    <app-data-table
+      *ngIf="(data$ | async).length > 0; else loading"
+      [columns]="columns$ | async"
+      [data]="data$ | async"
+    ></app-data-table>
+
+    <ng-template #loading>
+      <p>LOADING</p>
+    </ng-template>
+  </div>
+</div>

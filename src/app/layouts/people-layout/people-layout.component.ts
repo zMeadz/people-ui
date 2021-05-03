@@ -8,7 +8,7 @@ import { PeopleLayoutService } from './people-layout.service';
 })
 export class PeopleLayoutComponent {
   public columns$ = this.peopleLayoutService.columns$;
-  public people$ = this.peopleLayoutService.people$;
+  public data$ = this.peopleLayoutService.people$;
 
   constructor(
     private peopleLayoutService: PeopleLayoutService
