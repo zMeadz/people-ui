@@ -7,12 +7,15 @@ table {
   &:first-child {
     & th {
       text-align: left;
-      padding: 20px;
-      border-bottom: 1px solid $grey1;
+      padding: 20px 10px;
     }
   }
 
   & td {
     padding: 10px;
+  }
+
+  & p {
+    color: $grey2;
   }
 }

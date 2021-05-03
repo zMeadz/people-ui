@@ -3,8 +3,15 @@
 
   <div class="content">
     <app-data-table
+      *ngIf="((data$ | async) || []).length > 0; else loading"
       [columns]="columns$ | async"
       [data]="data$ | async"
     ></app-data-table>
   </div>
+
+  <ng-template #loading>
+    <div class="spinner-container">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  </ng-template>
 </div>

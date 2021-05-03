@@ -1,11 +1,15 @@
 <div>
   <table *ngIf="columns">
     <tr *ngIf="columns">
-      <th *ngFor="let column of columns">{{ column.label }}</th>
+      <th *ngFor="let column of columns">
+        <p>{{ column.label }}</p>
+      </th>
     </tr>
 
     <tr *ngFor="let row of data">
-      <td *ngFor="let column of columns">{{ rowValue(row, column) }}</td>
+      <td *ngFor="let column of columns">
+        <p>{{ rowValue(row, column) }}</p>
+      </td>
     </tr>
   </table>
 </div>

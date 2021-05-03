@@ -9,6 +9,8 @@ import { DataTableComponent } from './components/data-table/data-table.component
 import { ButtonComponent } from './components/button/button.component';
 import { EmailCharactersLayoutComponent } from './layouts/email-characters-layout/email-characters-layout.component';
 import { DuplicatesLayoutComponent } from './layouts/duplicates-layout/duplicates-layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DuplicatesLayoutComponent } from './layouts/duplicates-layout/duplicate
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
