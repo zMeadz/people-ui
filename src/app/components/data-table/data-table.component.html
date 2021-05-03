@@ -1,0 +1,11 @@
+<div>
+  <table *ngIf="columns">
+    <tr *ngIf="columns">
+      <th *ngFor="let column of columns">{{ column.label }}</th>
+    </tr>
+
+    <tr *ngFor="let row of data">
+      <td *ngFor="let column of columns">{{ rowValue(row, column) }}</td>
+    </tr>
+  </table>
+</div>

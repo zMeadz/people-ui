@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PeopleLayoutComponent } from './layouts/people-layout/people-layout.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleLayoutComponent,
-    TopBarComponent
+    TopBarComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,

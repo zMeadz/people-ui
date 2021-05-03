@@ -1,3 +1,10 @@
 <div>
   <app-top-bar header="People"></app-top-bar>
+
+  <div class="content">
+    <app-data-table
+      [columns]="columns$ | async"
+      [data]="people$ | async"
+    ></app-data-table>
+  </div>
 </div>

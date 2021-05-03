@@ -1,0 +1,18 @@
+@import "styles.scss";
+
+table {
+  width: 100%;
+  padding: 15px;
+
+  &:first-child {
+    & th {
+      text-align: left;
+      padding: 20px;
+      border-bottom: 1px solid $grey1;
+    }
+  }
+
+  & td {
+    padding: 10px;
+  }
+}
